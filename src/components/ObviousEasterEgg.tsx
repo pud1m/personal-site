@@ -3,7 +3,7 @@ import QRCode from 'react-qr-code';
 import socketClient from '@/utils/socket-client';
 import Player from '@/components/Player';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:8080';
 
 const OviousEasterEgg = () => {
 
