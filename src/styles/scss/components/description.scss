@@ -1,0 +1,78 @@
+
+.talkie-talkie {
+
+  @include mobile-only {
+    padding-top: 32px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 16vw;
+    line-height: 14vw;
+    width: 100%;
+    color: $blue;
+    font-weight: 600;
+
+    @include animate-fromRight(1s, 0s);
+
+    @include mobile-only {
+      font-size: 24vw;
+      line-height: 22vw;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    padding: 36px 24px 0 48px;
+    color: $blue;
+
+    &.small {
+      font-size: 16px;
+      padding: 0 24px 0 48px;
+    }
+
+    @include animate-fadeIn(1s, 0.5s);
+
+
+    @include mobile-only {
+      font-size: 18px;
+      padding: 0;
+
+      &.small {
+        font-size: 14px;
+        padding: 0;
+      }
+    }
+  }
+
+  address {
+    font-style: normal;
+    font-size: 16px;
+    padding: 36px 0 0 48px;
+    color: $blue;
+
+    @include transition(all, 0.25s, $animationsEaseOutQuint);
+    transform: scale(1);
+    transform-origin: center left;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    a {
+      text-decoration: none;
+      border-bottom: 2px solid $blue;
+      cursor: pointer;
+
+      background-color: $blue;
+      color: $coral;
+      padding: 0 4px;
+    }
+    @include animate-fadeIn(1s, 0.5s);
+
+
+    @include mobile-only {
+      padding: 0 0 64px;
+    }
+  }
+}

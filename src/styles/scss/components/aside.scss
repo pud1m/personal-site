@@ -1,0 +1,96 @@
+
+aside {
+  @include desktop-only {
+    width: 40%;
+    height: 100%;
+  }
+
+  @include mobile-only {
+    order: 2;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+
+
+  @include mobile-only {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .profile {
+    border: 8px solid $blue;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    width: 50%;
+
+    @include mobile-only {
+      width: 45%;
+    }
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+
+    transform-origin: center center;
+    @include animate-in-grow(1s, 0.5s);
+  }
+
+  h2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 400;
+
+    span {
+      background-color: $blue;
+      color: $coral;
+      padding: 0 4px;
+    }
+
+    @include mobile-only {
+      width: 45%;
+      font-size: 18px;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    gap: 16px;
+
+    @include mobile-only {
+      width: 100%;
+      justify-content: center;
+    }
+
+    li {
+      width: 4vh;
+      height: 4vh;
+      filter: brightness(0) saturate(100%) invert(25%) sepia(22%) saturate(961%) hue-rotate(180deg) brightness(84%) contrast(88%);
+
+      @include transition(all, 0.5s, $animationsEaseOutQuint);
+
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

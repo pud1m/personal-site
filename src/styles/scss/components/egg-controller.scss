@@ -1,0 +1,46 @@
+
+section.egg-controller {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $cambridge;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 48px;
+      color: $blue;
+  
+      &.loading {
+        @include animate-float(1.5s, 0s);
+      }
+    }
+
+    p {
+      color: $blue;
+    }
+  
+    .dwigt-btn {
+      background-color: $mindaro;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      width: 50%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+
+      span {
+        font-size: 36px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+
+// Core breakpoint mixins
+@mixin mobile-only() {
+  @media (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
+    @content;
+  }
+}
+
+@mixin desktop-only() {
+  @media (min-width: $breakpoint-desktop-min) and (max-width: $breakpoint-desktop-max) {
+    @content;
+  }
+}

@@ -1,0 +1,13 @@
+.peace {
+  position: absolute;
+  z-index: 1;
+
+  right: 0;
+  top: 40vh;
+
+  @include animate-fromBelow(1s, 1.5s);
+
+  @include mobile-only {
+    display: none;
+  }
+}
