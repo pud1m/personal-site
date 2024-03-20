@@ -1,6 +1,6 @@
 import { Socket, io } from 'socket.io-client';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:8080';
+const BASE_URL = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:8080';
 
 const socketClient = () => {
   const socket = io(BASE_URL);
