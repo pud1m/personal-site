@@ -1,9 +1,9 @@
 import { Socket, io } from 'socket.io-client';
 
-const PORT = parseInt(process.env.PORT || '3000', 10);
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 const socketClient = () => {
-  const socket = io(`:${PORT + 1}`, { path: '/api/socket', addTrailingSlash: false });
+  const socket = io(BASE_URL, { path: '/api/socket', addTrailingSlash: false });
 
   socket.on('connect_error', async err => {
     console.log(`connect_error due to ${err.message}`);
